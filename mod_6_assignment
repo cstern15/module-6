@@ -1,0 +1,40 @@
+#Problem 1
+import sys
+  for line in sys.stdin:
+    data=line.strip().split("\t")
+      if len(data)==6:
+      time=time.localtime() #changing time to be local time
+      date,time,store,item,cost,payment=data
+      print(time.strftime(time)) #printing the local time as a string
+
+#Problem 2
+from datetime import datetime  
+from datetime import timedelta  
+#subtract 60 seconds  
+print datetime.now() - timedelta(seconds=60)
+#will print the time and date 60 seconds in the past
+
+from datetime import datetime  
+from datetime import timedelta  
+#add 2 years, assuming no leap year so 1 year is 365 days
+print datetime.now() + timedelta(days=730)
+#will print the time and date 2 years in the future
+
+#Problem 3
+#timedelta object,d, representing 100 days, 10 hours, 13 minutes
+from datetime import timedelta
+d = timedelta(100 days, 10 hours, 13 minutes)
+print(d)
+
+#Problem 4
+#Write a function that takes two arguments (feet and inches) with this time object
+#not 100% sure what exactly this is asking, combbining both time, feet, and inches.
+from datetime import datetime 
+#get current date 
+datetime_object = datetime.now() 
+print(datetime_object) 
+print('Type :- ',type(datetime_object)) 
+
+def time_func(feet, inches):
+  datetime_object=datetime.now()
+  return datetime_object
